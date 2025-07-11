@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Enigma <%= level %></title>
+</head>
+<body>
+  <h1><%= question %></h1>
+  <% if (typeof error !== 'undefined') { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+  <form method="post">
+    <input type="text" name="answer" autofocus required>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
