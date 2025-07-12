@@ -16,6 +16,18 @@ app.use(session({
 
 const puzzles = [
   {
+    question: '29/03/2001 - 13/11/354',
+    answer: 'agostinho',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStZZK8ZVKH1MJ8YtcSgBj_l6NtcOM9RUYc_g&s',
+  },
+  {
+    question: 'EX23 no final',
+    answer: 'nilo',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/7/73/Egypt.Osiris.statuette.01.jpg',
+  },
+  {
     question: 'Enigma 1: Michel Moretti',
     answer: 'ajaccio',
     image:
