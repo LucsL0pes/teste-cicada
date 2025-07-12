@@ -58,8 +58,8 @@ function ensureLevel(level) {
 }
 
 app.get('/', (req, res) => {
-  req.session.level = req.session.level || 1;
-  res.redirect(`/puzzle${req.session.level}`);
+  req.session.level = 1;
+  res.render('index');
 });
 
 puzzles.forEach((puzzle, index) => {

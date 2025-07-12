@@ -1,6 +1,6 @@
 # Teste Cicada
 
-Este projeto é um exemplo simples de site de enigmas inspirado no estilo Cicada 3301. São cinco enigmas sequenciais que só podem ser acessados após a resolução do anterior.
+Este projeto é um exemplo simples de site de enigmas inspirado no estilo Cicada 3301. São cinco enigmas sequenciais que só podem ser acessados após a resolução do anterior. Ao abrir o endereço inicial (`/`) você verá uma tela introdutória com instruções e um botão **Iniciar** para avançar para o primeiro desafio.
 
 ## Como executar localmente
 
