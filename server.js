@@ -89,7 +89,7 @@ puzzles.forEach((puzzle, index) => {
 });
 
 app.get('/completed', ensureLevel(puzzles.length + 1), (req, res) => {
-  res.send('<h1>Parabéns! Você completou todos os enigmas.</h1>');
+  res.render('completed');
 });
 
 const port = process.env.PORT || 3000;
