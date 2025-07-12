@@ -15,11 +15,36 @@ app.use(session({
 }));
 
 const puzzles = [
-  { question: 'Enigma 1: Qual a palavra secreta?', answer: 'cicada' },
-  { question: 'Enigma 2: 2 + 2 = ?', answer: '4' },
-  { question: 'Enigma 3: Primeiro nome do criador do Linux?', answer: 'linus' },
-  { question: 'Enigma 4: Que linguagem executa no navegador?', answer: 'javascript' },
-  { question: 'Enigma 5: Complete: Hello ____!', answer: 'world' }
+  {
+    question: 'Enigma 1: Qual a palavra secreta?',
+    answer: 'cicada',
+    image:
+      'https://images.unsplash.com/photo-1610026802263-92d7b3d21404?auto=format&fit=crop&w=600&q=60',
+  },
+  {
+    question: 'Enigma 2: 2 + 2 = ?',
+    answer: '4',
+    image:
+      'https://images.unsplash.com/photo-1571158136638-d7aa1bf116c5?auto=format&fit=crop&w=600&q=60',
+  },
+  {
+    question: 'Enigma 3: Primeiro nome do criador do Linux?',
+    answer: 'linus',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/3/3f/Linus_Torvalds_2018.jpg',
+  },
+  {
+    question: 'Enigma 4: Que linguagem executa no navegador?',
+    answer: 'javascript',
+    image:
+      'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg',
+  },
+  {
+    question: 'Enigma 5: Complete: Hello ____!',
+    answer: 'world',
+    image:
+      'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=600&q=60',
+  },
 ];
 
 function ensureLevel(level) {
@@ -40,7 +65,7 @@ app.get('/', (req, res) => {
 puzzles.forEach((puzzle, index) => {
   const level = index + 1;
   app.get(`/puzzle${level}`, ensureLevel(level), (req, res) => {
-    res.render('puzzle', { question: puzzle.question, level });
+    res.render('puzzle', { question: puzzle.question, level, image: puzzle.image });
   });
 
   app.post(`/puzzle${level}`, ensureLevel(level), (req, res) => {
@@ -53,7 +78,12 @@ puzzles.forEach((puzzle, index) => {
         res.redirect(`/puzzle${level + 1}`);
       }
     } else {
-      res.render('puzzle', { question: puzzle.question, level, error: 'Resposta incorreta.' });
+      res.render('puzzle', {
+        question: puzzle.question,
+        level,
+        error: 'Resposta incorreta.',
+        image: puzzle.image,
+      });
     }
   });
 });
