@@ -16,34 +16,34 @@ app.use(session({
 
 const puzzles = [
   {
-    question: 'Enigma 1: Numa ilha do Mediterr\u00e2neo nasceu um pequeno grande imperador. Que cidade guarda seu ber\u00e7o?',
+    question: 'Enigma 1: Michel Moretti',
     answer: 'ajaccio',
     image:
       'https://www.politize.com.br/wp-content/uploads/2024/07/napoleao-retrato.jpg',
   },
   {
-    question: 'Enigma 2: 2 + 2 = ?',
-    answer: '4',
+    question: 'Morte de Mozart e Beethoven',
+    answer: 'floridsdorf',
     image:
-      'https://images.unsplash.com/photo-1571158136638-d7aa1bf116c5?auto=format&fit=crop&w=600&q=60',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Mozart_-_Piano_Concerto_No._21_-_Opening_Page_of_the_Autograph_Manuscript.jpg/500px-Mozart_-_Piano_Concerto_No._21_-_Opening_Page_of_the_Autograph_Manuscript.jpg',
   },
   {
-    question: 'Enigma 3: Primeiro nome do criador do Linux?',
-    answer: 'linus',
+    question: 'RHDV',
+    answer: ':(){:|:&};:',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/3/3f/Linus_Torvalds_2018.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAx6camOf_G96Zcs2Zj34Yjmy0ysPd-p0oJQ&s',
   },
   {
-    question: 'Enigma 4: Que linguagem executa no navegador?',
-    answer: 'javascript',
+    question: '38.897957° N, 77.036560° W. - U-235 Pu-239',
+    answer: 'harry s. truman',
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg',
+      'https://upload.wikimedia.org/wikipedia/pt/8/85/TheTrumanShow.jpg',
   },
   {
-    question: 'Enigma 5: Complete: Hello ____!',
-    answer: 'world',
+    question: 'Costurou rosas rubras e alvas, o pai, para sossegar a ilha. O filho empilhou seis alianças, duas cabeças sob o machado. Entre eles, o trono reluz em ouro com culpa entrelaçada. Nos claustros, ecoam votos quebrados e preces sem rainhas.',
+    answer: 'henrique vii',
     image:
-      'https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=600&q=60',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/500px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg',
   },
 ];
 
