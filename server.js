@@ -16,10 +16,10 @@ app.use(session({
 
 const puzzles = [
   {
-    question: 'Enigma 1: Qual a palavra secreta?',
-    answer: 'cicada',
+    question: 'Enigma 1: Numa ilha do Mediterr\u00e2neo nasceu um pequeno grande imperador. Que cidade guarda seu ber\u00e7o?',
+    answer: 'ajaccio',
     image:
-      'https://images.unsplash.com/photo-1610026802263-92d7b3d21404?auto=format&fit=crop&w=600&q=60',
+      'https://www.politize.com.br/wp-content/uploads/2024/07/napoleao-retrato.jpg',
   },
   {
     question: 'Enigma 2: 2 + 2 = ?',
