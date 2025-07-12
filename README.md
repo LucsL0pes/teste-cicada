@@ -36,3 +36,13 @@ kubectl apply -f k8s/deployment.yaml
 ```
 
 Isso criará um Deployment e um Service expondo o aplicativo internamente na porta 80.
+
+## Hospedagem
+
+Para publicar o projeto na internet de maneira simples você pode utilizar o serviço gratuito [Render](https://render.com/):
+
+1. Faça login ou crie uma conta no site.
+2. Crie um novo **Web Service** a partir deste repositório.
+3. Mantenha o ambiente Node e defina o comando de inicialização `npm start`.
+4. Aguarde a conclusão do build e do deploy.
+5. O aplicativo ficará acessível no endereço fornecido pela plataforma.
