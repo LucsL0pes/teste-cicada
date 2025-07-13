@@ -46,10 +46,7 @@
     </style>
   </head>
   <body>
-    <audio id="bg-music" autoplay loop style="display:none">
-      <source src="https://cdn.pixabay.com/download/audio/2022/02/18/audio_e963615989.mp3?filename=suspense-6589.mp3" type="audio/mpeg">
-    </audio>
-    <button id="toggle-music" class="btn btn-sm btn-outline-light">Silenciar</button>
+    <%- include('partials/audio') %>
     <div class="puzzle-container">
       <h1 class="h4 mb-4">Enigma <%= level %></h1>
       <% if (image) { %>
@@ -66,31 +63,5 @@
         </div>
       </form>
     </div>
-    <script>
-      const music = document.getElementById('bg-music');
-      const btn = document.getElementById('toggle-music');
-      function setMute(m) {
-        music.muted = m;
-        if (!m) {
-          music.play().catch(() => {});
-        } else {
-          music.pause();
-        }
-        btn.textContent = m ? 'Ativar Som' : 'Silenciar';
-        localStorage.setItem('music-muted', m);
-      }
-      btn.addEventListener('click', () => setMute(!music.muted));
-      const saved = localStorage.getItem('music-muted') === 'true';
-      setMute(saved);
-      document.addEventListener(
-        'click',
-        () => {
-          if (!music.muted) {
-            music.play().catch(() => {});
-          }
-        },
-        { once: true }
-      );
-    </script>
   </body>
 </html>

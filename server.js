@@ -1,6 +1,8 @@
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
+const RedisStore = require('connect-redis').default;
+const { createClient } = require('redis');
 
 const app = express();
 
@@ -8,11 +10,20 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }));
-app.use(session({
-  secret: 'cicada-secret',
-  resave: false,
-  saveUninitialized: true
-}));
+
+const redisClient = createClient({
+  url: process.env.REDIS_URL || 'redis://localhost:6379'
+});
+redisClient.connect().catch((err) => console.error('Redis error', err));
+
+app.use(
+  session({
+    store: new RedisStore({ client: redisClient }),
+    secret: process.env.SESSION_SECRET || 'cicada-secret',
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 const puzzles = [
   {
