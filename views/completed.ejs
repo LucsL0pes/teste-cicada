@@ -44,12 +44,26 @@
       const btn = document.getElementById('toggle-music');
       function setMute(m) {
         music.muted = m;
+        if (!m) {
+          music.play().catch(() => {});
+        } else {
+          music.pause();
+        }
         btn.textContent = m ? 'Ativar Som' : 'Silenciar';
         localStorage.setItem('music-muted', m);
       }
       btn.addEventListener('click', () => setMute(!music.muted));
       const saved = localStorage.getItem('music-muted') === 'true';
       setMute(saved);
+      document.addEventListener(
+        'click',
+        () => {
+          if (!music.muted) {
+            music.play().catch(() => {});
+          }
+        },
+        { once: true }
+      );
     </script>
   </body>
 </html>
